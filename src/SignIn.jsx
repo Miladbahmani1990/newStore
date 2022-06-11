@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const SignIn=()=>{
+const SignIn=({signUpArr})=>{
 
 const[signIn,setSignIn]=useState({
   email:"",
   password:""
 })
 
-const handleSignIn=(props)=>{
-  console.log(props.email);
+const handleSignIn=()=>{
   
-  if(signIn.email==props.email && signIn.password==props.password){
+  if(signUpArr.email==signIn.email && signUpArr.password==signIn.password){
     alert("you logedin")
 
   }else{

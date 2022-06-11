@@ -1,19 +1,28 @@
 import { useState } from "react";
-import SignIn from "./SignIn";
+import { Link } from "react-router-dom";
 
-const SignUp=()=>{
-  const [signUp,setsignUp]=useState({})
-  const [saveSup,setSaveSup]=useState([])
+const SignUp=({signUpArr,setsignUpArr})=>{
+  const [signUp,setsignUp]=useState({
+    name:"",
+    username:"",
+    email:"",
+    password:""
+  })
+  
+  
 
 const handleSignup=()=>{
-  setsignUp({
+
+  setsignUpArr([...signUpArr,{
     name:signUp.name,
     username:signUp.username,
     email:signUp.email,
     password:signUp.password
-})
-setSaveSup(...saveSup, signUp)
+}
+])
 
+alert("you added !")
+console.log(signUpArr);
  
 }
 
@@ -51,7 +60,9 @@ setSaveSup(...saveSup, signUp)
            <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSignup}>Sign up</button>
            <hr className="my-4"/>
            
-              
+           <Link to="/">
+            <span>Enter</span>
+           </Link>   
 
           </div>
         </div>
@@ -59,7 +70,6 @@ setSaveSup(...saveSup, signUp)
     </div>
   </div>
  </section>
- <SignIn email={signUp.email} password={signUp.password}/>
 </>
     )
 }
