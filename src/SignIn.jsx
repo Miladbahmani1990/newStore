@@ -1,7 +1,30 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useFormik } from "formik";
 
 const SignIn=({signUpArr})=>{
+  const formik=useFormik({
+    initialValues:{
+      email:"",
+      password:"",
+    },
+
+    onsubmit:values=>{
+      console.log(values);
+    },
+
+    validate:values=>{
+      let errors={}
+      if(!values.email){
+        errors.email="enter your Email"
+      }
+      if(!values.password){
+        errors.password="enter your Password"
+      }
+      return errors;
+    }
+  })
+  console.log(formik);
 
 const[signIn,setSignIn]=useState({
   email:"",
@@ -10,7 +33,7 @@ const[signIn,setSignIn]=useState({
 
 const handleSignIn=()=>{
   
-  if(signUpArr.email==signIn.email && signUpArr.password==signIn.password){
+  if(signUpArr.filter(u=>u.email ===signIn.email && signUpArr.password===signIn.password).length>0){
     alert("you logedin")
 
   }else{
@@ -19,7 +42,7 @@ const handleSignIn=()=>{
 }
     return(
         
-<section className="vh-100%" style={{backgroundColor: "#508bfc"}}>
+<section onSubmit={formik.handleSubmit} className="vh-100%" style={{backgroundColor: "#508bfc"}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -29,13 +52,15 @@ const handleSignIn=()=>{
             <h3 className="mb-5">Sign in</h3>
 
             <div className="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" className="form-control form-control-lg" value={signIn.email} onChange={(e)=>setSignIn({...signIn,email:e.target.value})} />
               <label className="form-label">Email</label>
+              <input type="email" id="typeEmailX-2" name='email' value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} className="form-control form-control-lg"/>
+              {formik.errors.email && formik.touched.email ? <small className='text-center text-danger d-block' >{formik.errors.email}</small> : null}
             </div>
 
             <div className="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" className="form-control form-control-lg" value={signIn.password} onChange={(e)=>setSignIn({...signIn,password:e.target.value})}/>
               <label className="form-label">Password</label>
+              <input type="password" id="typePasswordX-2" name='password' value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} className="form-control form-control-lg"/>
+              {formik.errors.password && formik.touched.password ? <small className='text-center text-danger d-block' >{formik.errors.password}</small> : null}
             </div>
 
             {/* Checkbox */}          
@@ -45,7 +70,7 @@ const handleSignIn=()=>{
                <label className="form-check-label"> Remember password </label>
                </div>
            </div>
-          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Do you have ever <NavLink to='SignUp' style={{textDecoration:"none"}}>Signed Up </NavLink> ?</h6>
+          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Do you have ever <NavLink to='SignUp' style={{textDecoration:"none"}}>SignUp </NavLink> ?</h6>
            <button className="btn btn-primary btn-lg btn-block mt-2" type="submit" onClick={handleSignIn}>Login</button>
            <hr className="my-4"/>
            <button className="btn btn-lg btn-block btn-primary mb-2" style={{backgroundColor: "#dd4b39"}}

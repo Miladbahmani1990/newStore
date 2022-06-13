@@ -1,7 +1,9 @@
+import { useFormik } from "formik";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignUp=({signUpArr,setsignUpArr})=>{
+  
   const [signUp,setsignUp]=useState({
     name:"",
     username:"",
@@ -13,17 +15,21 @@ const SignUp=({signUpArr,setsignUpArr})=>{
 
 const handleSignup=()=>{
 
-  setsignUpArr([...signUpArr,{
+  setsignUpArr([
+    ...signUpArr,
+    {
     name:signUp.name,
     username:signUp.username,
     email:signUp.email,
-    password:signUp.password
-}
-])
+    password:signUp.password,
+},
+]);
 
 alert("you added !")
 console.log(signUpArr);
- 
+
+                         /////////////// after signup is going to signIn page////////
+<Link to="/" />      
 }
 
     return(
@@ -37,33 +43,29 @@ console.log(signUpArr);
 
             <h3 className="mb-5">Sign up</h3>
             <div className="form-outline mb-4">
-              <input type="text" id="typeNameX-2" className="form-control form-control-lg" value={signUp.name} onChange={(e)=>setsignUp({...signUp, name:e.target.value})} />
               <label className="form-label">Name</label>
+              <input type="text" id="typeNameX-2" className="form-control form-control-lg" value={signUp.name} onChange={(e)=>setsignUp({...signUp, name:e.target.value})} />
             </div>
 
             <div className="form-outline mb-4">
-              <input type="text" id="typeUserNameX-2" className="form-control form-control-lg" value={signUp.username} onChange={(e)=>setsignUp({...signUp, username:e.target.value})} />
               <label className="form-label" >Username</label>
+              <input type="text" id="typeUserNameX-2" className="form-control form-control-lg" value={signUp.username} onChange={(e)=>setsignUp({...signUp, username:e.target.value})} />
             </div>
 
             <div className="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" className="form-control form-control-lg" value={signUp.email} onChange={(e)=>setsignUp({...signUp, email:e.target.value})}/>
               <label className="form-label" >Email</label>
+              <input type="email" id="typeEmailX-2" className="form-control form-control-lg" value={signUp.email} onChange={(e)=>setsignUp({...signUp, email:e.target.value})}/>
             </div>
 
             <div className="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" className="form-control form-control-lg" value={signUp.password} onChange={(e)=>setsignUp({...signUp, password:e.target.value})}/>
               <label className="form-label">Password</label>
+              <input type="password" id="typePasswordX-2" className="form-control form-control-lg" value={signUp.password} onChange={(e)=>setsignUp({...signUp, password:e.target.value})}/>
             </div>
 
             {/* Checkbox */}          
            <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSignup}>Sign up</button>
            <hr className="my-4"/>
            
-           <Link to="/">
-            <span>Enter</span>
-           </Link>   
-
           </div>
         </div>
       </div>
