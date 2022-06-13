@@ -1,30 +1,55 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useFormik } from "formik";
+import * as Yup from "yup";
+
+
 
 const SignIn=({signUpArr})=>{
+  
   const formik=useFormik({
+    
     initialValues:{
       email:"",
       password:"",
     },
-
+    
     onsubmit:values=>{
       console.log(values);
     },
 
+  
+  
     validate:values=>{
       let errors={}
       if(!values.email){
         errors.email="enter your Email"
+      }else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)){
+        errors.email="forExample : aaa@bbb.com"
       }
       if(!values.password){
         errors.password="enter your Password"
       }
       return errors;
-    }
+    },
+    
+    
+    
   })
   console.log(formik);
+  
+  const attrsE={
+    type:"email",
+    id:"typeEmailX-2",
+    name:'email',
+    className:"form-control form-control-lg"
+  }
+  const attrsP={
+    type:"password",
+    id:"typePasswordX-2",
+    name:'password',
+    className:"form-control form-control-lg"
+  }
 
 const[signIn,setSignIn]=useState({
   email:"",
@@ -53,13 +78,13 @@ const handleSignIn=()=>{
 
             <div className="form-outline mb-4">
               <label className="form-label">Email</label>
-              <input type="email" id="typeEmailX-2" name='email' value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} className="form-control form-control-lg"/>
+              <input  {...attrsE} value={formik.values.email} {...formik.getFieldProps("email")} />
               {formik.errors.email && formik.touched.email ? <small className='text-center text-danger d-block' >{formik.errors.email}</small> : null}
             </div>
 
             <div className="form-outline mb-4">
               <label className="form-label">Password</label>
-              <input type="password" id="typePasswordX-2" name='password' value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} className="form-control form-control-lg"/>
+              <input  {...attrsP} value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
               {formik.errors.password && formik.touched.password ? <small className='text-center text-danger d-block' >{formik.errors.password}</small> : null}
             </div>
 
