@@ -58,11 +58,11 @@ console.log(signUpArr);
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
         <div className="card shadow-2-strong" style={{borderRadius: "1rem"}}>
-          <div className="card-body p-5 text-center">
+          <div className="card-body p-5">
 
             <h3 className="mb-5">Sign up</h3>
             <div className="form-outline mb-4">
-              <label className="form-label">Name</label>
+              <label className="form-label">Name <span className='text-danger'>*</span></label>
               <FastField type="text" id="typeNameX-2" name="name" className="input-sm form-control" />
               <ErrorMessage  name="name">
                 {error=><small className="text-center text-danger">{error}</small>}
@@ -70,7 +70,7 @@ console.log(signUpArr);
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label" >Username</label>
+              <label className="form-label" >Username <span className='text-danger'>*</span></label>
               <FastField type="text" id="typeUserNameX-2" name="username" className="form-control " />
               <ErrorMessage  name="username"> 
               {error=><small className="text-center text-danger">{error}</small>}
@@ -78,15 +78,15 @@ console.log(signUpArr);
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label" >Email</label>
+              <label className="form-label" >Email <span className='text-danger'>*</span></label>
               <FastField type="email" id="typeEmailX-2" name="email" className="form-control "/>
-              <ErrorMessage  name="email">
+              <ErrorMessage  name="email" >
               {error=><small className="text-center text-danger">{error}</small>}
               </ErrorMessage>
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label">Password</label>
+              <label className="form-label">Password <span className='text-danger'>*</span></label>
               <FastField type="password" id="typePasswordX-2" name="password" className="form-control"/>
               <ErrorMessage  name="password">
               {error=><small className="text-center text-danger">{error}</small>}
@@ -94,12 +94,14 @@ console.log(signUpArr);
             </div>
             <div className="form-outline mb-4">
             <label className="form-label">Bio</label>
-              <FastField  type="text" name="bio" id="typePasswordX-2"  className="form-control" placeholder="Write your Bio" as="textarea"/>
+              <FastField  type="text" name="bio" id="typePasswordX-2"  className="form-control" placeholder="Write your Bio" componentلهف="textarea"/>
             </div>
 
-            {/* Checkbox */}          
+            {/* Checkbox */}   
+            <div className="text-center">
            <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSignup}>Sign up</button>
            <hr className="my-4"/>
+            </div>       
            
           </div>
         </div>

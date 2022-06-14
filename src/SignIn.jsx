@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useFormik } from "formik";
-
 
 
 
@@ -38,7 +37,6 @@ const SignIn=({signUpArr})=>{
     
     
   })
-  console.log(formik);
   
   const attrsE={
     type:"email",
@@ -74,18 +72,18 @@ const handleSignIn=()=>{
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
         <div className="card shadow-2-strong" style={{borderRadius: "1rem"}}>
-          <div className="card-body p-5 text-center">
+          <div className="card-body p-5">
 
             <h3 className="mb-5">Sign in</h3>
 
-            <div className="form-outline mb-4">
-              <label className="form-label">Email</label>
+            <div className="form-outline mb-4 text-left">
+              <label className="form-label">Email <span className='text-danger'>*</span></label>
               <input  {...attrsE} value={formik.values.email} {...formik.getFieldProps("email")} />
               {formik.errors.email && formik.touched.email ? <small className='text-center text-danger d-block' >{formik.errors.email}</small> : null}
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label">Password</label>
+              <label className="form-label">Password <span className='text-danger'>*</span></label>
               <input  {...attrsP} value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
               {formik.errors.password && formik.touched.password ? <small className='text-center text-danger d-block' >{formik.errors.password}</small> : null}
             </div>
@@ -97,13 +95,21 @@ const handleSignIn=()=>{
                <label className="form-check-label"> Remember password </label>
                </div>
            </div>
-          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Do you have ever <NavLink to='SignUp' style={{textDecoration:"none"}}>SignUp </NavLink> ?</h6>
+          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Have you ever  <NavLink to='SignUp' style={{textDecoration:"none"}}>signedUp</NavLink> ?</h6>
+          <div className='text-center'>
            <button className="btn btn-primary btn-lg btn-block mt-2" type="submit" onClick={handleSignIn}>Login</button>
            <hr className="my-4"/>
+
+           <a href='https://accounts.google.com/'>
            <button className="btn btn-lg btn-block btn-primary mb-2" style={{backgroundColor: "#dd4b39"}}
               type="submit"><i className="fab fa-google me-2"></i> Sign in with google</button>
-            <button className="btn btn-lg btn-block btn-primary mb-2" style={{backgroundColor: "#3b5998"}}
+          </a>
+
+          <a href='https://fa-ir.facebook.com/'>
+              <button className="btn btn-lg btn-block btn-primary mb-2" style={{backgroundColor: "#3b5998"}}
               type="submit"><i className="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+          </a>
+          </div>
               
 
           </div>
