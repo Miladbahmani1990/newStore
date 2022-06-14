@@ -1,6 +1,25 @@
-import { useFormik } from "formik";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ErrorMessage, FastField, Form, Formik } from "formik";
+import * as Yup from "yup"
+
+const initialValues={
+  name:"",
+  username:"",
+  email:"",
+  password:"",
+}
+
+const validationSchema=Yup.object({
+  name:Yup.string().required("Enter your Name"),
+  username:Yup.string().required("Enter your Username"),
+  email:Yup.string().required("Enter your Email").email("for Exsample : aaa@bbb.com"),
+  password:Yup.string().required("Enter your Password").min(8,"Enter 8 character")
+})
+
+const onSubmit=values=>{
+  console.log(values);
+}
 
 const SignUp=({signUpArr,setsignUpArr})=>{
   
@@ -14,7 +33,7 @@ const SignUp=({signUpArr,setsignUpArr})=>{
   
 
 const handleSignup=()=>{
-
+  
   setsignUpArr([
     ...signUpArr,
     {
@@ -33,8 +52,8 @@ console.log(signUpArr);
 }
 
     return(
-      <>
-        <section onSubmit={handleSignup} className="vh-100%" style={{backgroundColor: "#508bfc"}}>
+      <Formik onSubmit={onSubmit} handleSignup={handleSignup} initialValues={initialValues} validationSchema={validationSchema}>
+        <Form className="vh-100%" style={{backgroundColor: "#508bfc"}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -44,22 +63,38 @@ console.log(signUpArr);
             <h3 className="mb-5">Sign up</h3>
             <div className="form-outline mb-4">
               <label className="form-label">Name</label>
-              <input type="text" id="typeNameX-2" className="form-control form-control-lg" value={signUp.name} onChange={(e)=>setsignUp({...signUp, name:e.target.value})} />
+              <FastField type="text" id="typeNameX-2" name="name" className="input-sm form-control" />
+              <ErrorMessage  name="name">
+                {error=><small className="text-center text-danger">{error}</small>}
+              </ErrorMessage>
             </div>
 
             <div className="form-outline mb-4">
               <label className="form-label" >Username</label>
-              <input type="text" id="typeUserNameX-2" className="form-control form-control-lg" value={signUp.username} onChange={(e)=>setsignUp({...signUp, username:e.target.value})} />
+              <FastField type="text" id="typeUserNameX-2" name="username" className="form-control " />
+              <ErrorMessage  name="username"> 
+              {error=><small className="text-center text-danger">{error}</small>}
+              </ErrorMessage>
             </div>
 
             <div className="form-outline mb-4">
               <label className="form-label" >Email</label>
-              <input type="email" id="typeEmailX-2" className="form-control form-control-lg" value={signUp.email} onChange={(e)=>setsignUp({...signUp, email:e.target.value})}/>
+              <FastField type="email" id="typeEmailX-2" name="email" className="form-control "/>
+              <ErrorMessage  name="email">
+              {error=><small className="text-center text-danger">{error}</small>}
+              </ErrorMessage>
             </div>
 
             <div className="form-outline mb-4">
               <label className="form-label">Password</label>
-              <input type="password" id="typePasswordX-2" className="form-control form-control-lg" value={signUp.password} onChange={(e)=>setsignUp({...signUp, password:e.target.value})}/>
+              <FastField type="password" id="typePasswordX-2" name="password" className="form-control"/>
+              <ErrorMessage  name="password">
+              {error=><small className="text-center text-danger">{error}</small>}
+              </ErrorMessage>
+            </div>
+            <div className="form-outline mb-4">
+            <label className="form-label">Bio</label>
+              <FastField  type="text" name="bio" id="typePasswordX-2"  className="form-control" placeholder="Write your Bio" as="textarea"/>
             </div>
 
             {/* Checkbox */}          
@@ -71,8 +106,8 @@ console.log(signUpArr);
       </div>
     </div>
   </div>
- </section>
-</>
+ </Form>
+</Formik>
     )
 }
 

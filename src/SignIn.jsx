@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useFormik } from "formik";
-import * as Yup from "yup";
+
 
 
 
@@ -29,6 +29,8 @@ const SignIn=({signUpArr})=>{
       }
       if(!values.password){
         errors.password="enter your Password"
+      }else if((values.password).length<8){
+        errors.password="min 8 character"
       }
       return errors;
     },
