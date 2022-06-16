@@ -1,14 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ErrorMessage, FastField, Form, Formik } from "formik";
 import * as Yup from "yup"
 
-const initialValues={
-  name:"",
-  username:"",
-  email:"",
-  password:"",
-}
+
 
 const validationSchema=Yup.object({
   name:Yup.string().required("Enter your Name"),
@@ -17,43 +12,42 @@ const validationSchema=Yup.object({
   password:Yup.string().required("Enter your Password").min(8,"Enter 8 character")
 })
 
-const onSubmit=values=>{
-  console.log(values);
+// const onSubmit=e=>{
+// console.log(e);
+
+// }
+const initialValues={
+  name:"",
+  username:"",
+  email:"",
+  password:"",
+  bio:""
 }
 
+
 const SignUp=({signUpArr,setsignUpArr})=>{
-  
-  const [signUp,setsignUp]=useState({
-    name:"",
-    username:"",
-    email:"",
-    password:""
-  })
-  
+
+const handleSignup=(formik)=>{
+  console.log(formik);
   
 
-const handleSignup=()=>{
-  
-  setsignUpArr([
-    ...signUpArr,
-    {
-    name:signUp.name,
-    username:signUp.username,
-    email:signUp.email,
-    password:signUp.password,
-},
-]);
+setsignUpArr([...signUpArr ,formik.values])
 
-alert("you added !")
 console.log(signUpArr);
+// document.getElementById("typeNameX-2").value=""
+// document.getElementById("typeUserNameX-2").value=""
+// document.getElementById("typeEmailX-2").value=""
+// document.getElementById("typePasswordX-2").value=""
+// document.getElementById("typebioX-2").value=""
 
-                         /////////////// after signup is going to signIn page////////
-<Link to="/" />      
 }
 
     return(
-      <Formik onSubmit={onSubmit} handleSignup={handleSignup} initialValues={initialValues} validationSchema={validationSchema}>
-        <Form className="vh-100%" style={{backgroundColor: "#508bfc"}}>
+      <Formik  handleSignup={handleSignup} initialValues={initialValues} validationSchema={validationSchema}>
+        {formik=>{
+         
+          return(
+<Form className="vh-100%" style={{backgroundColor: "#508bfc"}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -94,21 +88,23 @@ console.log(signUpArr);
             </div>
             <div className="form-outline mb-4">
             <label className="form-label">Bio</label>
-              <FastField  type="text" name="bio" id="typePasswordX-2"  className="form-control" placeholder="Write your Bio" componentلهف="textarea"/>
+              <FastField  type="text" name="bio" id="typebioX-2"  className="form-control" placeholder="Write your Bio" component="textarea"/>
             </div>
 
             {/* Checkbox */}   
             <div className="text-center">
-           <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSignup}>Sign up</button>
-           <hr className="my-4"/>
-            </div>       
+              <button className="btn btn-primary btn-lg btn-block" type="button" onClick={()=>handleSignup(formik)} disabled={!(formik.isValid && formik.dirty)} >Sign up</button>
+             <hr className="my-4"/>
+           </div>       
            
           </div>
         </div>
       </div>
     </div>
   </div>
- </Form>
+        </Form>
+          )
+        }}
 </Formik>
     )
 }

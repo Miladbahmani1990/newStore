@@ -9,7 +9,7 @@ const Colection=()=>{
     return(
         <Routes>
             <Route path="/" element={<SignIn  signUpArr={signUpArr} />}/>
-            <Route path="/signUp" element={<SignUp setsignUpArr={setsignUpArr} signUpAr={signUpArr}/>}/> 
+            <Route path="/signUp" element={<SignUp setsignUpArr={setsignUpArr} signUpArr={signUpArr}/>}/> 
         </Routes>
 
     )

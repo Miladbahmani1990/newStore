@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { useFormik } from "formik";
 
 
@@ -57,7 +57,6 @@ const[signIn,setSignIn]=useState({
 })
 
 const handleSignIn=()=>{
-  
   if(signUpArr.filter(u=>u.email ===signIn.email && signUpArr.password===signIn.password).length>0){
     alert("you logedin")
 
