@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import {  NavLink } from 'react-router-dom';
+import React from 'react';
+import {  NavLink, useNavigate } from 'react-router-dom';
 import { useFormik } from "formik";
 
 
 
+
 const SignIn=({signUpArr})=>{
+  const navigate=useNavigate();
   
   const formik=useFormik({
     
@@ -12,13 +14,7 @@ const SignIn=({signUpArr})=>{
       email:"",
       password:"",
     },
-    
-    onsubmit:values=>{
-      console.log(values);
-    },
 
-  
-  
     validate:values=>{
       let errors={}
       if(!values.email){
@@ -32,9 +28,7 @@ const SignIn=({signUpArr})=>{
         errors.password="min 8 character"
       }
       return errors;
-    },
-    
-    
+    }
     
   })
   
@@ -51,22 +45,14 @@ const SignIn=({signUpArr})=>{
     className:"form-control form-control-lg"
   }
 
-const[signIn,setSignIn]=useState({
-  email:"",
-  password:""
-})
 
-const handleSignIn=()=>{
-  if(signUpArr.filter(u=>u.email ===signIn.email && signUpArr.password===signIn.password).length>0){
-    alert("you logedin")
+// const handleSignIn=(formik)=>{
+//   Object.values(signUpArr).filter(u=>(u.email===formik.values.email && u.password===formik.values.password ? navigate=("/Mainpage") : alert("email or password is incorrect!!!!")))
 
-  }else{
-    alert("email or password is incorrect!!!!")
-  }
-}
+// }
     return(
         
-<section onSubmit={formik.handleSubmit} className="vh-100%" style={{backgroundColor: "#508bfc"}}>
+<section  className="vh-100%" style={{backgroundColor: "#508bfc"}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -96,7 +82,15 @@ const handleSignIn=()=>{
            </div>
           <h6  style={{textAlign:"left" , textDecoration:"none"}}>Have you ever  <NavLink to='SignUp' style={{textDecoration:"none"}}>signedUp</NavLink> ?</h6>
           <div className='text-center'>
-           <button className="btn btn-primary btn-lg btn-block mt-2" type="submit" onClick={handleSignIn}>Login</button>
+           <button className="btn btn-primary btn-lg btn-block mt-2" type="submit" 
+           onClick={()=>{
+            Object.values(signUpArr).filter(u=>(u.email===formik.values.email && u.password===formik.values.password ? navigate("/Mainpage") : alert("email or password is incorrect!!!!")))
+            console.log(signUpArr[0].email);
+            console.log(formik.values.email);
+            
+
+           }}
+          >Login</button>
            <hr className="my-4"/>
 
            <a href='https://accounts.google.com/'>

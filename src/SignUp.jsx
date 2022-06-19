@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { ErrorMessage, FastField, Form, Formik } from "formik";
 import * as Yup from "yup"
 
@@ -12,10 +10,7 @@ const validationSchema=Yup.object({
   password:Yup.string().required("Enter your Password").min(8,"Enter 8 character")
 })
 
-// const onSubmit=e=>{
-// console.log(e);
 
-// }
 const initialValues={
   name:"",
   username:"",
@@ -28,18 +23,12 @@ const initialValues={
 const SignUp=({signUpArr,setsignUpArr})=>{
 
 const handleSignup=(formik)=>{
-  console.log(formik);
+  console.log(formik.values);
   
 
 setsignUpArr([...signUpArr ,formik.values])
 
 console.log(signUpArr);
-// document.getElementById("typeNameX-2").value=""
-// document.getElementById("typeUserNameX-2").value=""
-// document.getElementById("typeEmailX-2").value=""
-// document.getElementById("typePasswordX-2").value=""
-// document.getElementById("typebioX-2").value=""
-
 }
 
     return(
