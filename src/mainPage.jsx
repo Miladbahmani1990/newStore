@@ -110,7 +110,7 @@ const MainPage = () => {
                 data-swiper-slide-index="5"
                 style={{width:" 662px"}}
               >
-                <img src="../src/Mainpage/image/book-6" alt=""/>
+                <img src={require("../src/Mainpage/image/book-6.png" )} alt=""/>
               </a>
               <a
                 href="/"
@@ -120,7 +120,7 @@ const MainPage = () => {
                 data-swiper-slide-index="0"
                 style={{width:" 662px"}}
               >
-                <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png")} alt=""/>
               </a>
               <a
                 href="/"
@@ -151,7 +151,7 @@ const MainPage = () => {
                 data-swiper-slide-index="3"
                 style={{width:" 662px"}}
               >
-                <img src="../src/Mainpage/image/book-4.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
               </a>
               <a
                 href="/"
@@ -161,7 +161,7 @@ const MainPage = () => {
                 data-swiper-slide-index="4"
                 style={{width:" 662px"}}
               >
-                <img src="../src/Mainpage/image/book-5.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
               </a>
               <a
                 href="/"
@@ -171,7 +171,7 @@ const MainPage = () => {
                 data-swiper-slide-index="5"
                 style={{width:" 662px"}}
               >
-                <img src="../src/Mainpage/image/book-6.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png" )} className="stand"  alt="" />
               </a>
               <a
                 href="/"
@@ -181,10 +181,10 @@ const MainPage = () => {
                 data-swiper-slide-index="0"
                 style={{width:" 662px"}}
               >
-                <img src="../src/Mainpage/image/book-1.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
               </a>
             </div>
-            <img src="../src/Mainpage/image/stand.png" className="stand" alt="" />
+            <img src={require("../src/Mainpage/image/stand.png")} className="stand" alt="" />
             <span
               className="swiper-notification"
               aria-live="assertive"
@@ -220,7 +220,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-9.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -245,7 +245,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-10.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-10.png" )}alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -271,7 +271,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-1.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png" )}alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -297,7 +297,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-2.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book </h3>
@@ -323,7 +323,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-3.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-3.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -349,7 +349,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-4.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -375,7 +375,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-5.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -401,7 +401,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-6.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -427,7 +427,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-7.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-7.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -453,7 +453,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-8.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-8.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -479,7 +479,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-9.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -505,7 +505,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-10.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -531,7 +531,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-1.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -556,7 +556,7 @@ const MainPage = () => {
                 <a href="/" className="fas fa-eye"> </a>
               </div>
               <div className="image">
-                <img src="../src/Mainpage/image/book-2.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -629,7 +629,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-5.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -655,7 +655,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-1.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -681,7 +681,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-2.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -707,7 +707,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-3.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-3.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -733,7 +733,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-4.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -759,7 +759,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-5.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -785,7 +785,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-1.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -826,7 +826,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-10.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -852,7 +852,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-6.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -878,7 +878,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-7.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-7.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -904,7 +904,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-8.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-8.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -930,7 +930,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-9.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -956,7 +956,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-10.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -982,7 +982,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/book-6.png" alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -1023,7 +1023,7 @@ const MainPage = () => {
         </div>
 
         <div className="image">
-          <img src="../src/Mainpage/image/deal-img.jpg" alt="" />
+          <img src={require("../src/Mainpage/image/deal-img.jpg" )} alt="" />
         </div>
       </section>
 
@@ -1047,7 +1047,7 @@ const MainPage = () => {
               data-swiper-slide-index="5"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-6.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-6.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
                 ttttttttttttttttttttttttttext{" "}
@@ -1068,7 +1068,7 @@ const MainPage = () => {
               data-swiper-slide-index="0"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-1.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-1.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
                texttttttttttttttttttttttt{" "}
@@ -1089,7 +1089,7 @@ const MainPage = () => {
               data-swiper-slide-index="1"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-2.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-2.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
               textttttttttttttttttttttttttttt{" "}
@@ -1110,7 +1110,7 @@ const MainPage = () => {
               data-swiper-slide-index="2"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-3.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-3.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
                 tettttttttttttttttttttttttttttt{" "}
@@ -1130,7 +1130,7 @@ const MainPage = () => {
               data-swiper-slide-index="3"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-4.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-4.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
               textttttttttttttttttttttttttttt{" "}
@@ -1151,7 +1151,7 @@ const MainPage = () => {
               data-swiper-slide-index="4"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-5.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-5.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
                 testtttttttttttttttttttttttttttt{" "}
@@ -1172,7 +1172,7 @@ const MainPage = () => {
               data-swiper-slide-index="5"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-6.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-6.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
                texttttttttttttttttttttttttttttt{" "}
@@ -1193,7 +1193,7 @@ const MainPage = () => {
               data-swiper-slide-index="0"
               style={{width: "326px", marginLeft: "10px"}}
             >
-              <img src="../src/Mainpage/image/pic-1.png" alt="" />
+              <img src={require("../src/Mainpage/image/pic-1.png" )} alt="" />
               <h3>book reader's Name</h3>
               <p>
                 testtttttttttttttttttttttttt{" "}
@@ -1237,7 +1237,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/blog-5.jpg" alt="" />
+                <img src={require("../src/Mainpage/image/blog-5.jpg" )} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
@@ -1258,7 +1258,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/blog-1.jpg" alt="" />
+                <img src={require("../src/Mainpage/image/blog-1.jpg" )} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
@@ -1279,7 +1279,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/blog-2.jpg" alt="" />
+                <img src={require("../src/Mainpage/image/blog-2.jpg" )} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
@@ -1300,7 +1300,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/blog-3.jpg" alt="" />
+                <img src={require("../src/Mainpage/image/blog-3.jpg" )} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
@@ -1342,7 +1342,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/blog-5.jpg" alt="" />
+                <img src={require("../src/Mainpage/image/blog-5.jpg" )} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
@@ -1363,7 +1363,7 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="image">
-                <img src="../src/Mainpage/image/blog-1.jpg" alt="" />
+                <img src={require("../src/Mainpage/image/blog-1.jpg" )} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
@@ -1385,10 +1385,8 @@ const MainPage = () => {
         </div>
       </section>
 
-     
-
       <div className="loader-container active">
-        <img src="../src/Mainpage/image/loader-img.gif" alt="" />
+        <img src={require("../src/Mainpage/image/loader-img.gif" )} alt="" />
       </div>
     </>
   )
