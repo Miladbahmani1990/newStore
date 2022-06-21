@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Vazir";
     src: url(../fonts/Vazir-Regular.ttf);
-    
+
 }
 :root{
     --green:#27ae60;
@@ -308,11 +308,11 @@ section{
 }
 
 .home .row .content{
-    flex:1 1 42rem;
+    /* flex:1 1 42rem; */
 }
 
 .home .row .books-slider{
-    flex:1 1 42rem;
+    /* flex:1 1 42rem; */
     text-align: center;
     margin-top: 2rem;
 }

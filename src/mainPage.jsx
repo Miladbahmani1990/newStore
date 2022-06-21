@@ -1,7 +1,8 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import  "../src/Mainpage/css/style.css"
-
 const MainPage = () => {
+  const navigate=useNavigate()
   return (
     <>
       <header className="header">
@@ -22,29 +23,29 @@ const MainPage = () => {
 
           <div className="icons">
             <div id="search-btn" className="fas fa-search"></div>
-            <a href="/" className="fas fa-heart"> </a>
-            <a href="/" className="fas fa-shopping-cart"> </a>
-            <div id="login-btn" className="fas fa-user"></div>
+            <Link to="/" className="fas fa-heart"> </Link>
+            <Link to="/" className="fas fa-shopping-cart"> </Link>
+            <div id="login-btn" className="fas fa-user" type="button" onClick={()=>navigate("/signIn")}></div>
           </div>
         </div>
 
         <div className="header-2" style={{marginRight:"15px"}}>
           <nav className="navbar" >
-            <a href="#home">Home</a>
-            <a href="#featured">Favorats</a>
-            <a href="#arrivals">News</a>
-            <a href="#reviews">Comments</a>
-            <a href="#blogs" >Weblogs</a>
+            <Link to="/home">Home</Link>
+            <Link to="#featured">Favorats</Link>
+            <Link to="#arrivals">News</Link>
+            <Link to="#reviews">Comments</Link>
+            <Link to="#blogs" >Weblogs</Link>
           </nav>
         </div>
       </header>
 
       <nav className="bottom-navbar">
-        <a href="#home" className="fas fa-home"> </a>
-        <a href="#featured" className="fas fa-list"> </a>
-        <a href="#arrivals" className="fas fa-tags"> </a>
-        <a href="#reviews" className="fas fa-comments"> </a>
-        <a href="#blogs" className="fas fa-blog"> </a>
+        <Link to="#home" className="fas fa-home"> </Link>
+        <Link to="#featured" className="fas fa-list"> </Link>
+        <Link to="#arrivals" className="fas fa-tags"> </Link>
+        <Link to="#reviews" className="fas fa-comments"> </Link>
+        <Link to="#blogs" className="fas fa-blog"> </Link>
       </nav>
 
       <div className="login-form-container">
@@ -74,10 +75,10 @@ const MainPage = () => {
           </div>
           <input type="submit" value="sign in" className="btn" />
           <p>
-            have you forgotten your password? <a href="/">Click here</a>
+            have you forgotten your password? <Link to="/">Click here</Link>
           </p>
           <p>
-            have you not signedUp? <a href="/">Create account</a>
+            have you not signedUp? <Link to="/">Create account</Link>
           </p>
         </form>
       </div>
@@ -85,25 +86,24 @@ const MainPage = () => {
       <section className="home" id="home">
         <div className="row">
           <div className="content">
-            <h3>Up to 75% discount </h3>
+            <h3>Bookcase </h3>
             <p>
               Write text{" "}
             </p>
-            <a href="/" className="btn">
+            {/* <Link to="/" className="btn">
               Buy now
-            </a>
+            </Link> */}
           </div>
 
           <div className="swiper books-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-rtl">
-            <div
+            {/* <div
               className="swiper-wrapper"
               id="swiper-wrapper-728f26bc6b4fc15d"
               aria-live="off"
-              style={{transitionDuration: "0ms",transform:"translate3d(1344px, 0px, 0px)"}}
-              
-            >
-              <a
-                href="/"
+              // style={{transitionDuration: "0ms",transform:"translate3d(1344px, 0px, 0px}}  
+            > */}
+              <Link
+                to="/"
                 className="swiper-slide swiper-slide-duplicate"
                 role="group"
                 aria-label="6 / 6"
@@ -111,9 +111,9 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-6.png" )} alt=""/>
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="swiper-slide swiper-slide-prev"
                 role="group"
                 aria-label="1 / 6"
@@ -121,9 +121,9 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-1.png")} alt=""/>
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="swiper-slide swiper-slide-active"
                 role="group"
                 aria-label="2 / 6"
@@ -132,9 +132,9 @@ const MainPage = () => {
               >
                 <img src={require("../src/Mainpage/image/book-2.png")}  alt="" />
                 
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="swiper-slide swiper-slide-next"
                 role="group"
                 aria-label="3 / 6"
@@ -142,9 +142,9 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-3.png")} alt="" />
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="swiper-slide"
                 role="group"
                 aria-label="4 / 6"
@@ -152,9 +152,9 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
-              </a>
-              <a
-                href="/"
+              </Link>
+              {/* <Link
+                to="/"
                 className="swiper-slide"
                 role="group"
                 aria-label="5 / 6"
@@ -162,9 +162,9 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
-              </a>
-              <a
-                href="/"
+              </Link> */}
+              {/* <Link
+                to="/"
                 className="swiper-slide"
                 role="group"
                 aria-label="6 / 6"
@@ -172,9 +172,9 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-6.png" )} className="stand"  alt="" />
-              </a>
-              <a
-                href="/"
+              </Link> */}
+              {/* <Link
+                to="/"
                 className="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
                 role="group"
                 aria-label="1 / 6"
@@ -182,8 +182,8 @@ const MainPage = () => {
                 style={{width:" 662px"}}
               >
                 <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
-              </a>
-            </div>
+              </Link> */}
+            {/* </div> */}
             <img src={require("../src/Mainpage/image/stand.png")} className="stand" alt="" />
             <span
               className="swiper-notification"
@@ -205,7 +205,7 @@ const MainPage = () => {
             className="swiper-wrapper"
             id="swiper-wrapper-3e63e515b59c6eab"
             aria-live="off"
-            style={{transitionDuration: "0ms" , transform: "translate3d(2856px, 0px, 0px)"}}
+            // style={{transitionDuration: "0ms" , transform: "translate3d(2856px, 0px, 0px)"}}
           >
             <div
               className="swiper-slide box swiper-slide-duplicate swiper-slide-duplicate-next"
@@ -215,9 +215,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
@@ -227,9 +227,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
             <div
@@ -240,9 +240,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-10.png" )}alt="" />
@@ -252,9 +252,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -266,9 +266,9 @@ const MainPage = () => {
               style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-1.png" )}alt="" />
@@ -278,9 +278,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -292,9 +292,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
@@ -304,9 +304,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -318,9 +318,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-3.png" )} alt="" />
@@ -330,9 +330,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -344,9 +344,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
@@ -356,9 +356,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -370,9 +370,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
@@ -382,9 +382,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -396,9 +396,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
@@ -408,9 +408,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -422,9 +422,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-7.png" )} alt="" />
@@ -434,9 +434,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -448,9 +448,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-8.png" )} alt="" />
@@ -460,9 +460,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -474,9 +474,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
@@ -486,9 +486,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -500,9 +500,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
@@ -512,9 +512,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
 
@@ -526,9 +526,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
@@ -538,9 +538,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
             <div
@@ -551,9 +551,9 @@ const MainPage = () => {
               style={{width: "326px", marginLeft: "10px"}}
             >
               <div className="icons">
-                <a href="/" className="fas fa-search"> </a>
-                <a href="/" className="fas fa-heart"> </a>
-                <a href="/" className="fas fa-eye"> </a>
+                <Link to="/" className="fas fa-search"> </Link>
+                <Link to="/" className="fas fa-heart"> </Link>
+                <Link to="/" className="fas fa-eye"> </Link>
               </div>
               <div className="image">
                 <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
@@ -563,9 +563,9 @@ const MainPage = () => {
                 {/* <div className="price">
                   5 هزار تومان <span>10 هزارتومان</span>
                 </div>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                   اضافه کردن به سبد خرید
-                </a> */}
+                </Link> */}
               </div>
             </div>
           </div>
@@ -618,10 +618,10 @@ const MainPage = () => {
             className="swiper-wrapper"
             id="swiper-wrapper-9049a27ffacc2d5b"
             aria-live="off"
-            style={{transitionDuration: "0ms", transform: "translate3d(2016px, 0px, 0px)"}}
+            // style={{transitionDuration: "0ms", transform: "translate3d(2016px, 0px, 0px)"}}
           >
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-duplicate"
               role="group"
               aria-label="5 / 5"
@@ -644,10 +644,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box"
               role="group"
               aria-label="1 / 5"
@@ -670,10 +670,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-prev"
               role="group"
               aria-label="2 / 5"
@@ -696,10 +696,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-active"
               role="group"
               aria-label="3 / 5"
@@ -722,10 +722,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-next"
               role="group"
               aria-label="4 / 5"
@@ -748,10 +748,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box"
               role="group"
               aria-label="5 / 5"
@@ -774,10 +774,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-duplicate"
               role="group"
               aria-label="1 / 5"
@@ -800,7 +800,7 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
 
           <span
@@ -815,10 +815,10 @@ const MainPage = () => {
             className="swiper-wrapper"
             id="swiper-wrapper-3e1b04482656c559"
             aria-live="off"
-            style={{transitionDuration: "0ms", transform: "translate3d(2016px, 0px, 0px)"}}
+            // style={{transitionDuration: "0ms", transform: "translate3d(2016px, 0px, 0px)"}}
           >
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-duplicate"
               role="group"
               aria-label="5 / 5"
@@ -841,10 +841,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box"
               role="group"
               aria-label="1 / 5"
@@ -867,10 +867,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-prev"
               role="group"
               aria-label="2 / 5"
@@ -893,10 +893,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-active"
               role="group"
               aria-label="3 / 5"
@@ -919,10 +919,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-next"
               role="group"
               aria-label="4 / 5"
@@ -945,10 +945,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box"
               role="group"
               aria-label="5 / 5"
@@ -971,10 +971,10 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="swiper-slide box swiper-slide-duplicate"
               role="group"
               aria-label="1 / 5"
@@ -997,7 +997,7 @@ const MainPage = () => {
                   <i className="fas fa-star-half-alt"></i>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
 
           <span
@@ -1017,9 +1017,9 @@ const MainPage = () => {
             استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است{" "}
           </p>
-          <a href="/" className="btn">
+          <Link to="/" className="btn">
             اکنون خرید کنید
-          </a>
+          </Link>
         </div>
 
         <div className="image">
@@ -1038,7 +1038,7 @@ const MainPage = () => {
             className="swiper-wrapper"
             id="swiper-wrapper-af9b8c9d33d35270"
             aria-live="off"
-            style={{cursor: "grab", transitionDuration: "0ms", transform: "translate3d(1344px, 0px, 0px)"}}
+            // style={{cursor: "grab", transitionDuration: "0ms", transform: "translate3d(1344px, 0px, 0px)"}}
           >
             <div
               className="swiper-slide box swiper-slide-duplicate"
@@ -1227,7 +1227,7 @@ const MainPage = () => {
             className="swiper-wrapper"
             id="swiper-wrapper-0dd5e9a10e66cc3fc"
             aria-live="off"
-            style={{cursor: "grab", transitionDuration: "0ms", transform: "translate3d(2016px, 0px, 0px)"}}
+            // style={{cursor: "grab", transitionDuration: "0ms", transform: "translate3d(2016px, 0px, 0px)"}}
           >
             <div
               className="swiper-slide box swiper-slide-duplicate"
@@ -1244,9 +1244,9 @@ const MainPage = () => {
                 <p>
                   texttttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                  more study
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -1265,9 +1265,9 @@ const MainPage = () => {
                 <p>
                  textttttttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                 more study
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -1286,9 +1286,9 @@ const MainPage = () => {
                 <p>
                   textttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                 more study
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -1307,9 +1307,9 @@ const MainPage = () => {
                 <p>
                  texttttttttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                 more study
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -1328,9 +1328,9 @@ const MainPage = () => {
                 <p>
                  texttttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                 more study
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -1349,9 +1349,9 @@ const MainPage = () => {
                 <p>
                  textttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                 more study
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -1370,9 +1370,9 @@ const MainPage = () => {
                 <p>
                   texttttttttttttttttttttttttttttttttttttttt{" "}
                 </p>
-                <a href="/" className="btn">
+                <Link to="/" className="btn">
                 more study
-                </a>
+                </Link>
               </div>
             </div>
           </div>
