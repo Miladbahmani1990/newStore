@@ -80,7 +80,7 @@ const SignIn=({signUpArr})=>{
                <label className="form-check-label"> Remember password </label>
                </div>
            </div>
-          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Have you ever  <NavLink to='SignUp' style={{textDecoration:"none"}}>signedUp</NavLink> ?</h6>
+          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Have you ever  <NavLink to='/signUp' style={{textDecoration:"none"}}>signedUp</NavLink> ?</h6>
           <div className='text-center'>
            <button className="btn btn-primary btn-lg btn-block mt-2" type="submit" 
            onClick={()=>{

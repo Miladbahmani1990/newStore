@@ -1,0 +1,51 @@
+.logo img{
+    margin: 30px;
+    width: 350px;
+    height: 150px;
+}
+
+.readmore{
+    width: 120px;
+    height:60px;
+    background-color:rgb(66, 66, 66);
+    margin: 35px;
+}
+
+.readmore a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size:20px;
+    color:white;
+    line-height: 70px;
+    margin-left: 10px;
+}
+
+.readmore a:hover{
+    text-decoration: underline;
+}
+
+.explorer{
+    text-decoration: none;
+    margin-top: 100px;
+}
+
+strong a{
+    font-size:35px;
+    text-decoration:none;
+}  
+
+strong a:hover{
+    text-decoration: underline;
+   
+}
+
+
+.Reading{
+    text-decoration:none;
+    border-bottom: 3px solid rgb(24, 29, 24);
+}  
+
+.Reading:hover{
+    text-decoration: none;
+    border-bottom: 3px solid rgb(143, 245, 10);
+}  

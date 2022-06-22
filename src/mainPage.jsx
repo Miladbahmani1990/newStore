@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import  "../src/Mainpage/css/style.css"
+import  "../src/Mainpage/css/style-main.css"
 const MainPage = () => {
   const navigate=useNavigate()
   return (
