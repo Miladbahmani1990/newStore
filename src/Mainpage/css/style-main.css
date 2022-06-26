@@ -11,10 +11,10 @@
     --light-color:#666;
     --border:.1rem solid rgba(0,0,0,.1);
     --border-hover:.1rem solid var(--black);
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --box-shadow:0 .5rem .5rem rgba(0,0,0,.1);
 }
 
-*{
+ *{
     font-family: "Vazir";
     margin:0; padding:0;
     box-sizing: border-box;
@@ -32,7 +32,7 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 5rem;
     scroll-behavior: smooth;
-}
+} 
 
 html::-webkit-scrollbar{
     width:1rem;
@@ -465,6 +465,7 @@ section{
 
 .newsletter{
     background:url(../image/letter-bg.jpg) no-repeat;
+    height: 350px;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -740,11 +741,11 @@ section{
 
 
 
-
-
-
-
-
+div .swiper-wrapper{
+    height: auto;
+    transition-duration: 0ms; 
+    transform: translate3d(0px,0px,0px); 
+}
 
 
 /* media queries  */

@@ -1,51 +1,70 @@
 import React from "react";
+import { Question, Quora, Quote } from "react-bootstrap-icons";
 import { Link, useNavigate } from "react-router-dom";
-import  "../src/Mainpage/css/style-main.css"
+import "../src/Mainpage/css/style-main.css";
 const MainPage = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
-    <>
+    <div className="container-fluid">
       <header className="header">
         <div className="header-1">
-            <span className="logo">
+          <span className="logo">
             {" "}
-              <i className="fas fa-book" style={{width:"10px" ,marginRight:"10px"}}></i> library{" "}
-            </span>
+            <i
+              className="fas fa-book"
+              style={{ width: "10px", marginRight: "10px" }}
+            ></i>{" "}
+            library{" "}
+          </span>
           <form action="" className="search-form">
-            <input
-              type="search"
-              name=""
-              placeholder="search"
-              id="search-box"
-            />
+            <input type="search" name="" placeholder="search" id="search-box" />
             <label htmlFor="search-box" className="fas fa-search"></label>
           </form>
 
           <div className="icons">
             <div id="search-btn" className="fas fa-search"></div>
-            <Link to="/" className="fas fa-heart"> </Link>
-            <Link to="/" className="fas fa-shopping-cart"> </Link>
-            <div id="login-btn" className="fas fa-user" type="button" onClick={()=>navigate("/signIn")}></div>
+            <Link to="/" className="fas fa-heart">
+              {" "}
+            </Link>
+            <Link to="/" className="fas fa-shopping-cart">
+              {" "}
+            </Link>
+            <div
+              id="login-btn"
+              className="fas fa-user"
+              type="button"
+              onClick={() => navigate("/signIn")}
+            ></div>
           </div>
         </div>
 
-        <div className="header-2" style={{marginRight:"15px"}}>
-          <nav className="navbar" >
+        <div className="header-2" style={{ marginRight: "15px" }}>
+          <nav className="navbar">
             <Link to="/home">Home</Link>
             <Link to="#featured">Favorats</Link>
             <Link to="#arrivals">News</Link>
             <Link to="#reviews">Comments</Link>
-            <Link to="#blogs" >Weblogs</Link>
+            <Link to="#blogs">Weblogs</Link>
           </nav>
         </div>
       </header>
 
       <nav className="bottom-navbar">
-        <Link to="#home" className="fas fa-home"> </Link>
-        <Link to="#featured" className="fas fa-list"> </Link>
-        <Link to="#arrivals" className="fas fa-tags"> </Link>
-        <Link to="#reviews" className="fas fa-comments"> </Link>
-        <Link to="#blogs" className="fas fa-blog"> </Link>
+        <Link to="#home" className="fas fa-home">
+          {" "}
+        </Link>
+        <Link to="#featured" className="fas fa-list">
+          {" "}
+        </Link>
+        <Link to="#arrivals" className="fas fa-tags">
+          {" "}
+        </Link>
+        <Link to="#reviews" className="fas fa-comments">
+          {" "}
+        </Link>
+        <Link to="#blogs" className="fas fa-blog">
+          {" "}
+        </Link>
       </nav>
 
       <div className="login-form-container">
@@ -87,9 +106,7 @@ const MainPage = () => {
         <div className="row">
           <div className="content">
             <h3>Bookcase </h3>
-            <p>
-              Write text{" "}
-            </p>
+            <p>Write text </p>
             {/* <Link to="/" className="btn">
               Buy now
             </Link> */}
@@ -102,58 +119,57 @@ const MainPage = () => {
               aria-live="off"
               // style={{transitionDuration: "0ms",transform:"translate3d(1344px, 0px, 0px}}  
             > */}
-              <Link
-                to="/"
-                className="swiper-slide swiper-slide-duplicate"
-                role="group"
-                aria-label="6 / 6"
-                data-swiper-slide-index="5"
-                style={{width:" 662px"}}
-              >
-                <img src={require("../src/Mainpage/image/book-6.png" )} alt=""/>
-              </Link>
-              <Link
-                to="/"
-                className="swiper-slide swiper-slide-prev"
-                role="group"
-                aria-label="1 / 6"
-                data-swiper-slide-index="0"
-                style={{width:" 662px"}}
-              >
-                <img src={require("../src/Mainpage/image/book-1.png")} alt=""/>
-              </Link>
-              <Link
-                to="/"
-                className="swiper-slide swiper-slide-active"
-                role="group"
-                aria-label="2 / 6"
-                data-swiper-slide-index="1"
-                style={{width:" 662px"}}
-              >
-                <img src={require("../src/Mainpage/image/book-2.png")}  alt="" />
-                
-              </Link>
-              <Link
-                to="/"
-                className="swiper-slide swiper-slide-next"
-                role="group"
-                aria-label="3 / 6"
-                data-swiper-slide-index="2"
-                style={{width:" 662px"}}
-              >
-                <img src={require("../src/Mainpage/image/book-3.png")} alt="" />
-              </Link>
-              <Link
-                to="/"
-                className="swiper-slide"
-                role="group"
-                aria-label="4 / 6"
-                data-swiper-slide-index="3"
-                style={{width:" 662px"}}
-              >
-                <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
-              </Link>
-              {/* <Link
+            <Link
+              to="/"
+              className="swiper-slide swiper-slide-duplicate"
+              role="group"
+              aria-label="6 / 6"
+              data-swiper-slide-index="5"
+              style={{ width: " 662px" }}
+            >
+              <img src={require("../src/Mainpage/image/book-6.png")} alt="" />
+            </Link>
+            <Link
+              to="/"
+              className="swiper-slide swiper-slide-prev"
+              role="group"
+              aria-label="1 / 6"
+              data-swiper-slide-index="0"
+              style={{ width: " 662px" }}
+            >
+              <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
+            </Link>
+            <Link
+              to="/"
+              className="swiper-slide swiper-slide-active"
+              role="group"
+              aria-label="2 / 6"
+              data-swiper-slide-index="1"
+              style={{ width: " 662px" }}
+            >
+              <img src={require("../src/Mainpage/image/book-2.png")} alt="" />
+            </Link>
+            <Link
+              to="/"
+              className="swiper-slide swiper-slide-next"
+              role="group"
+              aria-label="3 / 6"
+              data-swiper-slide-index="2"
+              style={{ width: " 662px" }}
+            >
+              <img src={require("../src/Mainpage/image/book-3.png")} alt="" />
+            </Link>
+            <Link
+              to="/"
+              className="swiper-slide"
+              role="group"
+              aria-label="4 / 6"
+              data-swiper-slide-index="3"
+              style={{ width: " 662px" }}
+            >
+              <img src={require("../src/Mainpage/image/book-4.png")} alt="" />
+            </Link>
+            {/* <Link
                 to="/"
                 className="swiper-slide"
                 role="group"
@@ -163,7 +179,7 @@ const MainPage = () => {
               >
                 <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
               </Link> */}
-              {/* <Link
+            {/* <Link
                 to="/"
                 className="swiper-slide"
                 role="group"
@@ -173,7 +189,7 @@ const MainPage = () => {
               >
                 <img src={require("../src/Mainpage/image/book-6.png" )} className="stand"  alt="" />
               </Link> */}
-              {/* <Link
+            {/* <Link
                 to="/"
                 className="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
                 role="group"
@@ -184,7 +200,11 @@ const MainPage = () => {
                 <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
               </Link> */}
             {/* </div> */}
-            <img src={require("../src/Mainpage/image/stand.png")} className="stand" alt="" />
+            <img
+              src={require("../src/Mainpage/image/stand.png")}
+              className="stand"
+              alt=""
+            />
             <span
               className="swiper-notification"
               aria-live="assertive"
@@ -212,15 +232,21 @@ const MainPage = () => {
               role="group"
               aria-label="9 / 10"
               data-swiper-slide-index="8"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-9.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -237,15 +263,24 @@ const MainPage = () => {
               role="group"
               aria-label="10 / 10"
               data-swiper-slide-index="9"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-10.png" )}alt="" />
+                <img
+                  src={require("../src/Mainpage/image/book-10.png")}
+                  alt=""
+                />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -266,12 +301,18 @@ const MainPage = () => {
               style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-1.png" )}alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -289,15 +330,21 @@ const MainPage = () => {
               role="group"
               aria-label="2 / 10"
               data-swiper-slide-index="1"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-2.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book </h3>
@@ -315,15 +362,21 @@ const MainPage = () => {
               role="group"
               aria-label="3 / 10"
               data-swiper-slide-index="2"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-3.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-3.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -341,15 +394,21 @@ const MainPage = () => {
               role="group"
               aria-label="4 / 10"
               data-swiper-slide-index="3"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-4.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -367,15 +426,21 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 10"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -393,15 +458,21 @@ const MainPage = () => {
               role="group"
               aria-label="6 / 10"
               data-swiper-slide-index="5"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -419,15 +490,21 @@ const MainPage = () => {
               role="group"
               aria-label="7 / 10"
               data-swiper-slide-index="6"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-7.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-7.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -445,15 +522,21 @@ const MainPage = () => {
               role="group"
               aria-label="8 / 10"
               data-swiper-slide-index="7"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-8.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-8.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -471,15 +554,21 @@ const MainPage = () => {
               role="group"
               aria-label="9 / 10"
               data-swiper-slide-index="8"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-9.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -497,15 +586,24 @@ const MainPage = () => {
               role="group"
               aria-label="10 / 10"
               data-swiper-slide-index="9"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
+                <img
+                  src={require("../src/Mainpage/image/book-10.png")}
+                  alt=""
+                />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -523,15 +621,21 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 10"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -548,15 +652,21 @@ const MainPage = () => {
               role="group"
               aria-label="2 / 10"
               data-swiper-slide-index="1"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="icons">
-                <Link to="/" className="fas fa-search"> </Link>
-                <Link to="/" className="fas fa-heart"> </Link>
-                <Link to="/" className="fas fa-eye"> </Link>
+                <Link to="/" className="fas fa-search">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-heart">
+                  {" "}
+                </Link>
+                <Link to="/" className="fas fa-eye">
+                  {" "}
+                </Link>
               </div>
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-2.png")} alt="" />
               </div>
               <div className="content">
                 <h3>famous book</h3>
@@ -594,17 +704,17 @@ const MainPage = () => {
       </section>
 
       <section className="newsletter">
-        <form action="">
+        {/* <form action="">
           <h3>common Update for lastTime</h3>
           <input
             type="email"
             name=""
-            placeholder="ایمیل خود را وارد کنید"
+            placeholder="Enter your Email"
             id=""
             className="box"
           />
           <input type="submit" value="عضویت" className="btn" />
-        </form>
+        </form> */}
       </section>
 
       <section className="arrivals" id="arrivals">
@@ -626,10 +736,10 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 5"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -652,10 +762,10 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 5"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -678,10 +788,10 @@ const MainPage = () => {
               role="group"
               aria-label="2 / 5"
               data-swiper-slide-index="1"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-2.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-2.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -704,10 +814,10 @@ const MainPage = () => {
               role="group"
               aria-label="3 / 5"
               data-swiper-slide-index="2"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-3.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-3.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -730,10 +840,10 @@ const MainPage = () => {
               role="group"
               aria-label="4 / 5"
               data-swiper-slide-index="3"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-4.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-4.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -756,10 +866,10 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 5"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-5.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-5.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -782,10 +892,10 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 5"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-1.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-1.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -823,10 +933,13 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 5"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
+                <img
+                  src={require("../src/Mainpage/image/book-10.png")}
+                  alt=""
+                />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -849,10 +962,10 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 5"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -875,10 +988,10 @@ const MainPage = () => {
               role="group"
               aria-label="2 / 5"
               data-swiper-slide-index="1"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-7.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-7.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -901,10 +1014,10 @@ const MainPage = () => {
               role="group"
               aria-label="3 / 5"
               data-swiper-slide-index="2"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-8.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-8.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -927,10 +1040,10 @@ const MainPage = () => {
               role="group"
               aria-label="4 / 5"
               data-swiper-slide-index="3"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-9.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-9.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -953,10 +1066,13 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 5"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-10.png" )} alt="" />
+                <img
+                  src={require("../src/Mainpage/image/book-10.png")}
+                  alt=""
+                />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -979,10 +1095,10 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 5"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/book-6.png" )} alt="" />
+                <img src={require("../src/Mainpage/image/book-6.png")} alt="" />
               </div>
               <div className="content">
                 <h3>News</h3>
@@ -1010,25 +1126,22 @@ const MainPage = () => {
 
       <section className="deal">
         <div className="content">
-          <h3>معامله روز</h3>
-          <h1>تا 50٪ تخفیف</h1>
+          <h3> hear and enjoy</h3>
           <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است{" "}
+            One glance at a book and you hear the voice of another person,
+            perhaps someone dead for 1,000 years .To read is to voyage through
+            time Carl Saga
           </p>
-          <Link to="/" className="btn">
-            اکنون خرید کنید
-          </Link>
+          <q>carel sagan</q>
         </div>
 
         <div className="image">
-          <img src={require("../src/Mainpage/image/deal-img.jpg" )} alt="" />
+          <img src={require("../src/Mainpage/image/deal-img.jpg")} alt="" />
         </div>
       </section>
 
       <section className="reviews" id="reviews">
-        <h1 className="heading">
+      <h1 className="heading">
           {" "}
           <span> Comments</span>{" "}
         </h1>
@@ -1045,13 +1158,11 @@ const MainPage = () => {
               role="group"
               aria-label="6 / 6"
               data-swiper-slide-index="5"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-6.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-6.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-                ttttttttttttttttttttttttttext{" "}
-              </p>
+              <p>ttttttttttttttttttttttttttext </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1066,13 +1177,11 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 6"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-1.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-1.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-               texttttttttttttttttttttttt{" "}
-              </p>
+              <p>texttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1087,13 +1196,11 @@ const MainPage = () => {
               role="group"
               aria-label="2 / 6"
               data-swiper-slide-index="1"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-2.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-2.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-              textttttttttttttttttttttttttttt{" "}
-              </p>
+              <p>textttttttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1108,13 +1215,11 @@ const MainPage = () => {
               role="group"
               aria-label="3 / 6"
               data-swiper-slide-index="2"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-3.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-3.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-                tettttttttttttttttttttttttttttt{" "}
-              </p>
+              <p>tettttttttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1128,13 +1233,11 @@ const MainPage = () => {
               role="group"
               aria-label="4 / 6"
               data-swiper-slide-index="3"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-4.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-4.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-              textttttttttttttttttttttttttttt{" "}
-              </p>
+              <p>textttttttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1149,13 +1252,11 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 6"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-5.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-5.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-                testtttttttttttttttttttttttttttt{" "}
-              </p>
+              <p>testtttttttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1170,13 +1271,11 @@ const MainPage = () => {
               role="group"
               aria-label="6 / 6"
               data-swiper-slide-index="5"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-6.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-6.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-               texttttttttttttttttttttttttttttt{" "}
-              </p>
+              <p>texttttttttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1191,13 +1290,11 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 6"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
-              <img src={require("../src/Mainpage/image/pic-1.png" )} alt="" />
+              <img src={require("../src/Mainpage/image/pic-1.png")} alt="" />
               <h3>book reader's Name</h3>
-              <p>
-                testtttttttttttttttttttttttt{" "}
-              </p>
+              <p>testtttttttttttttttttttttttt </p>
               <div className="stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -1234,18 +1331,16 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 5"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/blog-5.jpg" )} alt="" />
+                <img src={require("../src/Mainpage/image/blog-5.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                  texttttttttttttttttttttttttt{" "}
-                </p>
+                <p>texttttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                 more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1255,18 +1350,16 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 5"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/blog-1.jpg" )} alt="" />
+                <img src={require("../src/Mainpage/image/blog-1.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                 textttttttttttttttttttttttttttt{" "}
-                </p>
+                <p>textttttttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1276,18 +1369,16 @@ const MainPage = () => {
               role="group"
               aria-label="2 / 5"
               data-swiper-slide-index="1"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/blog-2.jpg" )} alt="" />
+                <img src={require("../src/Mainpage/image/blog-2.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                  textttttttttttttttttttttttt{" "}
-                </p>
+                <p>textttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1297,18 +1388,16 @@ const MainPage = () => {
               role="group"
               aria-label="3 / 5"
               data-swiper-slide-index="2"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/blog-3.jpg" )} alt="" />
+                <img src={require("../src/Mainpage/image/blog-3.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                 texttttttttttttttttttttttttttttt{" "}
-                </p>
+                <p>texttttttttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1318,18 +1407,16 @@ const MainPage = () => {
               role="group"
               aria-label="4 / 5"
               data-swiper-slide-index="3"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
                 <img src={require("../src/Mainpage/image/blog-4.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                 texttttttttttttttttttttttttt{" "}
-                </p>
+                <p>texttttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1339,18 +1426,16 @@ const MainPage = () => {
               role="group"
               aria-label="5 / 5"
               data-swiper-slide-index="4"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/blog-5.jpg" )} alt="" />
+                <img src={require("../src/Mainpage/image/blog-5.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                 textttttttttttttttttttttttt{" "}
-                </p>
+                <p>textttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1360,18 +1445,16 @@ const MainPage = () => {
               role="group"
               aria-label="1 / 5"
               data-swiper-slide-index="0"
-              style={{width: "326px", marginLeft: "10px"}}
+              style={{ width: "326px", marginLeft: "10px" }}
             >
               <div className="image">
-                <img src={require("../src/Mainpage/image/blog-1.jpg" )} alt="" />
+                <img src={require("../src/Mainpage/image/blog-1.jpg")} alt="" />
               </div>
               <div className="content">
                 <h3>subject</h3>
-                <p>
-                  texttttttttttttttttttttttttttttttttttttttt{" "}
-                </p>
+                <p>texttttttttttttttttttttttttttttttttttttttt </p>
                 <Link to="/" className="btn">
-                more study
+                  more study
                 </Link>
               </div>
             </div>
@@ -1386,9 +1469,9 @@ const MainPage = () => {
       </section>
 
       <div className="loader-container active">
-        <img src={require("../src/Mainpage/image/loader-img.gif" )} alt="" />
+        <img src={require("../src/Mainpage/image/loader-img.gif")} alt="" />
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 export default MainPage;
