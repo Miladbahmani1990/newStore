@@ -51,23 +51,23 @@ const SignIn=({signUpArr})=>{
 
 // }
     return( 
-      <div  className="vh-100%" style={{backgroundColor: "#508bfc"}}>
+      <div  className="vh-100% bg" style={{backgroundImage: "url(/image/pic-home/Marshs-Library-Dublin.jpg.webp)"  }}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div className="card shadow-2-strong" style={{borderRadius: "1rem"}}>
+        <div className="card shadow-2-strong" style={{borderRadius: "1rem" ,backgroundColor: "rgba(100,100,100,0.4)"}}>
           <div className="card-body p-5">
 
             <h3 className="mb-5">Sign in</h3>
 
             <div className="form-outline mb-4 text-left">
-              <label className="form-label">Email <span className='text-danger'>*</span></label>
+              <label className="form-label fs-4">Email <span className='text-danger'>*</span></label>
               <input  {...attrsE} value={formik.values.email} {...formik.getFieldProps("email")} />
               {formik.errors.email && formik.touched.email ? <small className='text-center text-danger' >{formik.errors.email}</small> : null}
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label">Password <span className='text-danger'>*</span></label>
+              <label className="form-label fs-4">Password <span className='text-danger'>*</span></label>
               <input  {...attrsP} value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
               {formik.errors.password && formik.touched.password ? <small className='text-center text-danger' >{formik.errors.password}</small> : null}
             </div>
@@ -79,7 +79,7 @@ const SignIn=({signUpArr})=>{
                <label className="form-check-label"> Remember password </label>
                </div>
            </div>
-          <h6  style={{textAlign:"left" , textDecoration:"none"}}>Have you ever  <NavLink to='/signUp' style={{textDecoration:"none"}}>signedUp</NavLink> ?</h6>
+          <h6  style={{textAlign:"left" , textDecoration:"none",marginTop:"10px",color:"white" }} className="fs-4">Have you ever  <NavLink to='/signUp' style={{textDecoration:"none"}}>signedUp</NavLink> ?</h6>
           <div className='text-center'>
            <button className="btn btn-primary btn-lg btn-block mt-2" type="submit"  disabled={!(formik.dirty&&formik.isValid)}
            onClick={()=>{
