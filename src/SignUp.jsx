@@ -1,5 +1,7 @@
 import { ErrorMessage, FastField, Form, Formik } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup"
+import FormikControl from "./formikcontrol/formikcontrol";
 
 
 
@@ -18,21 +20,39 @@ const initialValues={
   password:"",
   bio:""
 }
-
+const onSubmit=(values)=>{
+  console.log(values);
+}
 
 const SignUp=({signUpArr,setsignUpArr})=>{
+const navigate=useNavigate()
+
+// const saveUpArr=(formik)=>{
+//   let save1=[]
+//   let save=Object.values(signUpArr)
+//   console.log(formik.values.email);
+//   console.log(save);
+//   console.log(save[0].email);
+// if(save.length>0 && save1.length!=save.length && formik.values.email !=save[0].email){
+//   save1=save
+//   console.log(save);
+//   console.log(save1);
+//   // navigate("/signIn")
+//   alert("ooook")
+// }else{
+//   alert("you signedUp already")
+// }
+// }
 
 const handleSignup=(formik)=>{
-  console.log(formik.values);
-  
-
-setsignUpArr([...signUpArr ,formik.values])
-
-console.log(signUpArr);
+console.log(formik.values)
+setsignUpArr([...signUpArr,formik.values])
+console.log(signUpArr)
+// saveUpArr(formik)
 }
 
     return(
-      <Formik  handleSignup={handleSignup} initialValues={initialValues} validationSchema={validationSchema}>
+      <Formik  onSubmit={handleSignup} initialValues={initialValues} validationSchema={validationSchema}>
         {formik=>{
          
           return(
@@ -44,39 +64,41 @@ console.log(signUpArr);
           <div className="card-body p-5">
 
             <h3 className="mb-5">Sign up</h3>
-            <div className="form-outline mb-4">
-              <label className="form-label">Name <span className='text-danger'>*</span></label>
-              <FastField type="text" id="typeNameX-2" name="name" className="input-sm form-control" />
-              <ErrorMessage  name="name">
-                {error=><small className="text-center text-danger">{error}</small>}
-              </ErrorMessage>
-            </div>
+
+            <FormikControl
+            formik={formik}
+             control="input"
+             lable="Name"
+             span="*"
+             type="text"
+             name="name"
+            />
 
             <div className="form-outline mb-4">
-              <label className="form-label" >Username <span className='text-danger'>*</span></label>
+              <label className="form-label fs-3" >Username <span className='text-danger'>*</span></label>
               <FastField type="text" id="typeUserNameX-2" name="username" className="form-control " />
               <ErrorMessage  name="username"> 
-              {error=><small className="text-center text-danger">{error}</small>}
+              {error=><small className="text-center text-danger fs-5">{error}</small>}
               </ErrorMessage>
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label" >Email <span className='text-danger'>*</span></label>
+              <label className="form-label fs-3" >Email <span className='text-danger'>*</span></label>
               <FastField type="email" id="typeEmailX-2" name="email" className="form-control "/>
               <ErrorMessage  name="email" >
-              {error=><small className="text-center text-danger">{error}</small>}
+              {error=><small className="text-center text-danger fs-5">{error}</small>}
               </ErrorMessage>
             </div>
 
             <div className="form-outline mb-4">
-              <label className="form-label">Password <span className='text-danger'>*</span></label>
+              <label className="form-label fs-3">Password <span className='text-danger'>*</span></label>
               <FastField type="password" id="typePasswordX-2" name="password" className="form-control"/>
               <ErrorMessage  name="password">
-              {error=><small className="text-center text-danger">{error}</small>}
+              {error=><small className="text-center text-danger fs-5">{error}</small>}
               </ErrorMessage>
             </div>
             <div className="form-outline mb-4">
-            <label className="form-label">Bio</label>
+            <label className="form-label fs-3">Bio</label>
               <FastField  type="text" name="bio" id="typebioX-2"  className="form-control" placeholder="Write your Bio" component="textarea"/>
             </div>
 

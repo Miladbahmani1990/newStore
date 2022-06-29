@@ -31,7 +31,7 @@ const SignIn=({signUpArr})=>{
     }
     
   })
-  console.log(formik);
+  // console.log(formik);
   const attrsE={
     type:"email",
     id:"typeEmailX-2",
@@ -61,12 +61,12 @@ const SignIn=({signUpArr})=>{
             <h3 className="mb-5">Sign in</h3>
 
             <div className="form-outline mb-4 text-left">
-              <label className="form-label fs-4">Email <span className='text-danger'>*</span></label>
+              <label className="form-label fs-3">Email <span className='text-danger'>*</span></label>
               <input  {...attrsE} value={formik.values.email} {...formik.getFieldProps("email")} />
               {formik.errors.email && formik.touched.email ? <small className='text-center text-danger' >{formik.errors.email}</small> : null}
             </div>
 
-            <div className="form-outline mb-4">
+            <div className="form-outline mb-3">
               <label className="form-label fs-4">Password <span className='text-danger'>*</span></label>
               <input  {...attrsP} value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
               {formik.errors.password && formik.touched.password ? <small className='text-center text-danger' >{formik.errors.password}</small> : null}
@@ -83,7 +83,7 @@ const SignIn=({signUpArr})=>{
           <div className='text-center'>
            <button className="btn btn-primary btn-lg btn-block mt-2" type="submit"  disabled={!(formik.dirty&&formik.isValid)}
            onClick={()=>{
-            Object.values(signUpArr).filter(u=>(u.email===formik.values.email && u.password===formik.values.password ? navigate("/Mainpage") : alert("email or password is incorrect!!!!")))
+            Object.values(signUpArr).filter(u=>(u.email===formik.values.email && u.password===formik.values.password ? navigate("/") : alert("email or password is incorrect!!!!")))
             console.log(signUpArr[0].email);
             console.log(formik.values.email);
            }}

@@ -1,5 +1,4 @@
 import React from "react";
-import { Question, Quora, Quote } from "react-bootstrap-icons";
 import { Link, useNavigate } from "react-router-dom";
 import "../src/Mainpage/css/style-main.css";
 const MainPage = () => {
@@ -41,9 +40,9 @@ const MainPage = () => {
         <div className="header-2" style={{ marginRight: "15px" }}>
           <nav className="navbar">
             <Link to="/home">Home</Link>
-            <Link to="#featured">Favorats</Link>
-            <Link to="#arrivals">News</Link>
-            <Link to="#reviews">Comments</Link>
+            <a href="#featured">Favorats</a>
+            <a href="#arrivals">New</a>
+            <a href="#reviews">Comments</a>
             <Link to="#blogs">Weblogs</Link>
           </nav>
         </div>
@@ -214,7 +213,7 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="featured" id="featured">
+      <section className="featured" id="">
         <h1 className="heading">
           {" "}
           <span>famous books</span>{" "}
@@ -1313,7 +1312,7 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="blogs" id="blogs">
+      <section className="blogs" id="featured">
         <h1 className="heading">
           {" "}
           <span>Weblogs</span>{" "}
@@ -1475,3 +1474,4 @@ const MainPage = () => {
   );
 };
 export default MainPage;
+
